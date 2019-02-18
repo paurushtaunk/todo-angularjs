@@ -38,7 +38,7 @@
                                 <div>
                                     <input type="checkbox"  ng-click="strikeThis"ng-value="{{task}}" class="text-strike">
                                     <label class="mb-0 strikeThis ng-binding">{{task}}
-                                        <input type="button" class="w3-btn w3-black"  value="X" />{</input>
+                                        <button type="button" ng-click="removeTask(vm.taskName)">X</div>
                                     </label>
                                 </div>
                             </li>
