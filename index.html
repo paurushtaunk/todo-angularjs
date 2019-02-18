@@ -10,8 +10,9 @@
             font-family: 'Roboto';
             font-size: 20px;
         }
-        .text-strike {
+        .text-strike:checked + .strikeThis {
             text-decoration: line-through;
+            text-decoration: disabled;
         }
         </style>
     </head>
@@ -35,8 +36,10 @@
                     <ul class="list-group">
                             <li class="list-group-item" ng-repeat="task in vm.tasks">
                                 <div>
-                                    <input type="checkbox">
-                                    <label class="mb-0">{{task}}</label>
+                                    <input type="checkbox"  ng-click="strikeThis"ng-value="{{task}}" class="text-strike">
+                                    <label class="mb-0 strikeThis ng-binding">{{task}}
+                                        <input type="button" class="w3-btn w3-black"  value="X" />{</input>
+                                    </label>
                                 </div>
                             </li>
                             <!-- <li class="list-group-item">
